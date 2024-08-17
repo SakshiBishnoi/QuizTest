@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzie Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1 class="logo">QUIZZIE</h1>
+            <nav>
+                <button class="nav-btn active" data-page="dashboard">Dashboard</button>
+                <button class="nav-btn" data-page="analytics">Analytics</button>
+                <button class="nav-btn" data-page="create-quiz">Create Quiz</button>
+            </nav>
+            <button class="logout-btn">LOGOUT</button>
+        </aside>
+        <main class="main-content">
+            <section id="dashboard" class="page active">
+                <div class="stats">
+                    <div class="stat-card">
+                        <h2 id="quizCount">12</h2>
+                        <p>Quiz Created</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2 id="questionCount">110</h2>
+                        <p>Questions Created</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2 id="impressionCount">1.4K</h2>
+                        <p>Total Impressions</p>
+                    </div>
+                </div>
+                <h3>Trending Quizs</h3>
+                <div id="trendingQuizzes" class="quiz-grid">
+                    <!-- Quizzes will be dynamically added here -->
+                </div>
+            </section>
+
+            <section id="analytics" class="page">
+                <h2>Quiz Analysis</h2>
+                <table id="quiz-analysis-table">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Quiz Name</th>
+                            <th>Created on</th>
+                            <th>Impression</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Quiz data will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="create-quiz" class="page">
+                <!-- Create Quiz content will be added later -->
+            </section>
+        </main>
+    </div>
+
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <h3>Are you confirm you want to delete?</h3>
+            <button id="confirm-delete">Confirm Delete</button>
+            <button id="cancel-delete">Cancel</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Link copied to Clipboard</div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
